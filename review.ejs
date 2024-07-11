@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <div id="form">
+        <% if (locals.user) { %>
+            <form action="/add" method="post" class="form">
+
+                <input type="text" class="title" name="title" value="<%= user.book %>" >
+                <input type="text" class="author" name="author" value="<%= user.book_author %>" >
+                <!-- Review Input -->
+                <label for="reviewTextarea" class="review">Review</label>
+                <textarea  class="reviewTextarea" name="reviewTextarea"></textarea>
+        
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        <%}else{%>
+        <form action="/update" method="post" class="form">
+
+            <input type="text" class="title" name="title" value="<%= books.book %>" >
+            <input type="text" class="author" name="author" value="<%= books.book_author %>" >
+            <!-- Review Input -->
+            <label for="reviewTextarea" class="review">Review</label>
+            <textarea  class="reviewTextarea" name="reviewTextarea"><%= books.review %></textarea>
+    
+            <button type="submit" class="submit">Submit</button>
+        </form>
+        <%}%>
+    </div>
+    
+
+    </form>
+</body>
+</html>

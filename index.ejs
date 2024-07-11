@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <main>
+        <div class="hero">
+            <div class="text_section">
+                <h2>Discover something new to read</h2>
+                <p>Book recommendations from real people, not robots. Uncover future
+                    bestsellers by voting for your favorites.
+                </p>
+            </div>
+            <div class="pic_section">
+                <img class="hero_image" src="https://images.gr-assets.com/misc/1714061436-1714061436_goodreads_misc.png">
+            </div>
+        </div>
+        <div class="content">
+            <%if(locals.book){%>
+                <%book.forEach( book => {%>
+                    <div class="main_content">
+                        <div class="cover_content">
+                            <img src="https://covers.openlibrary.org/b/olid/<%= book.cover_id %>-M.jpg">
+                        </div>
+                        <div class="text_content">
+                            <h2><%= book.book %></h2>
+                            <h3>by: <%= book.book_author%></h3>
+                            <p><%= book.review %></p>
+                        </div>
+                    </div>
+                <%})%>
+            <%}%>
+        
+
+            
+        </div>
+            
+            
+            
+            
+            
+
+    </main> 
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CritiqueCorner</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="nav-title">
+                <h1>Critique<span>Corner</span></h1>
+            </div>
+            <a href="/">Home</a>
+            <a href="/book">My Book</a>
+            <form action="/get" method="post">
+                <input name="bookName" placeholder="Add Book" class="inputSection">
+            </form>
+        </div>
+        <div class="content">
+            <%user.forEach( user => {%>
+                <div class="main_content">
+                    <div class="cover_content">
+                        <img src="https://covers.openlibrary.org/b/olid/<%= user.cover_id %>-M.jpg">
+                    </div>
+                    <div class="text_content">
+                        <h2><%= user.book %></h2>
+                        <h3><%= user.book_author %></h3>
+                        <p><%= user.review %></p>
+                        <div class="option">
+                            <a href="/delete?book_id=<%= user.id %>" >Delete</a>
+                            <a href="/edit?book_id=<%= user.id %>">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+    </div>
+
+        
+    
+</body>
+</html>
