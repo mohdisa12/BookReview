@@ -1,2 +1,2 @@
 # BookReview
-Created a book review website that allow people to give reviews and see reviews of other
+I developed a dynamic book review website utilizing EJS templates, CSS for styling, and JavaScript for interactive elements. The site integrates with external APIs using Axios for fetching book data, enhancing user experience with real-time updates. Authentication functionalities were implemented for secure user interactions, leveraging Postgres for data storage managed through Express and Node.js. Advanced query manipulation was employed to optimize search and content retrieval, showcasing my proficiency in full-stack web development and database management.
